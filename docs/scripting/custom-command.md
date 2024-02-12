@@ -101,11 +101,15 @@ world.beforeEvents.chatSend.subscribe((eventData) => {
 		case '!gmc':
 			eventData.cancel = true;
 			player.runCommandAsync('gamemode c');
-			break;
+			breark;
 		case '!gms':
 			eventData.cancel = true;
 			player.runCommandAsync('gamemode s');
 			break;
+                case '!sturcture':
+                        eventData.cancel = true;
+                        player.runCommandAync('structure load <name> <xyz>');
+                        break;
 		default: break;
 	}
 });
